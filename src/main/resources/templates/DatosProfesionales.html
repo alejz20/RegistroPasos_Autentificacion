@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos Profesionales</title>
+    <link id="styles" type="text/css" rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<form action="recibe-datos-profesionales" method="post" th:object="${datos}">
+
+    <fieldset>
+        <legend>Datos Profesionales</legend>
+
+        <label>Departamento: </label>
+        <input type="text" th:field="*{departamento}" /> </br>
+
+        <label>Salario: </label>
+        <input type="text" th:field="*{salario}" /> </br>
+
+        <label>Comentarios: </label>
+        <textarea th:field="*{comentarios}" cols="40" rows="5" /> </br>
+
+        <input type="submit" value="Grabar información e ir al paso 3 - Datos Bancarios" /> </br>
+
+    </fieldset>
+</form>
+</body>
+</html>

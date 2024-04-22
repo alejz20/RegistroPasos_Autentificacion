@@ -1,0 +1,14 @@
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.error{
+    list-style-type: '* ';
+    color: red;
+}
+
+img{
+    width: 3rem;
+    height: 3rem;
+}

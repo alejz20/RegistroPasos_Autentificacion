@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos Bancarios</title>
+    <link id="styles" type="text/css" rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<form action="recibe-datos-bancarios" method="post" th:object="${datos}">
+    <fieldset>
+        <legend>Datos Bancarios</legend>
+
+        <label>Cuenta Corriente: </label>
+        <input type="text" th:value="${cuenta_corriente}" /> </br>
+
+
+        <input type="submit" value="Grabar información e ir resumen final" /> </br>
+
+    </fieldset>
+
+</body>
+</html>

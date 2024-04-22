@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumen</title>
+    <link id="styles" type="text/css" rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<form action="resumen" method="post" th:object="${datos}" >
+
+    <fieldset>
+        <legend>Resumen</legend>
+
+        <label>Nombre: <span th:text="${datos.nombre}"></span>
+        </label> </br>
+
+        <label>Clave: <span th:text="${datos.clave}"></span>
+        </label> </br>
+
+        <label>Confirmar Clave: <span th:text="${datos.confirmaClave}"></span>
+        </label> </br>
+
+        <label> Casado o Pareja: <span th:text="${datos.casado_pareja ? 'Si' : 'No'}"></span>
+        </label> </br>
+
+        <label> Hijo: <span th:text="${datos.hijos ? 'Si' : 'No'}"></span>
+        </label> </br>
+
+        <label> Nacionalidad: <span th:each="nacionalidad : ${datos.listaPaises}" th:text="${listaPaises} + ' , '"></span>
+        </label>
+    </fieldset>
+    <br>
+        <legend>Datos Personales</legend>
+        <label>Departamento: <span th:text="${datos.departamento}"></span> </label> </br>
+
+        <label>Salario: <span th:text="${datos.salario}"></span> </label> </br>
+
+        <label>Comentarios: <span th:text="${datos.comentarios}"></span> </label> </br>
+
+    </fieldset>
+    <fieldset>
+        <legend>Datos Bancarios</legend>
+
+        <label>Cuenta Corriente: <span th:text="${datos.cuenta_corriente}"></span> </label> </br>
+
+    </fieldset>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

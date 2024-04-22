@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos Personales</title>
+    <link id="styles" type="text/css" rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+<form action="recibe-datos-personales" method="post" th:object="${datos}" >
+
+    <fieldset>
+        <legend> Datos Personales</legend>
+
+        <label for="tratamiento">Tratamiento</label>
+        <select name="tratamiento" id="tratamiento" >
+            <option th:each="tratamiento : ${listatratamiento}"
+                    th:text="${tratamiento.value}"
+                    th:value="${tratamiento.key}"></option>
+        </select> </br>
+        </label>
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" th:value="${nombre}" />
+
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos" th:value="${apellido}" /> </br>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento: </label>
+        <input type="text" name="fechaNacimiento" id="fechaNacimiento" th:value="${fechaNacimiento}" /> </br>
+
+        <label for="genero">Genero: </label>
+        <th:block th:each="genero: ${listagenero}" id="genero">
+            <input type="radio" name="genero" id="genero"
+                   th:value="${genero.key}" th:text="${genero.value}" />
+        </th:block> </br>
+
+        <label for="casado/pareja">Casado o Pareja de hecho: </label>
+        <input type="checkbox" name="casado/pareja" id="casado/pareja" th:value="${casado_pareja}"> </br>
+
+        <label for="hijos">Hijos: </label>
+        <input type="checkbox" name="hijos" id="hijos" th:value="${hijos}"> </br>
+
+        <label for="nacionalidad">Nacionalidad: </label>
+        <select name="nacionalidad" id="nacionalidad" multiple="multiple">
+            <option th:each="nacionalidad : ${listaPaises}"
+                    th:text="${nacionalidad.value}"
+                    th:value="${nacionalidad.key}"></option>
+        </select> </br>
+
+        <input type="submit" value="Grabar información e ir al paso 2 - Datos Profesionales" />
+
+    </fieldset>
+
+
+
+</form>
+</body>
+</html>
