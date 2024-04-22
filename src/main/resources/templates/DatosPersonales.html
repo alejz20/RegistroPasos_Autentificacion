@@ -17,11 +17,11 @@
             <option th:each="tratamiento : ${listatratamiento}"
                     th:text="${tratamiento.value}"
                     th:value="${tratamiento.key}"></option>
-        </select> </br>
-        </label>
+        </select>
+
 
         <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" id="nombre" th:value="${nombre}" />
+        <input type="text" name="nombre" id="nombre" th:value="${nombre}" /> </br>
 
         <label for="apellidos">Apellidos: </label>
         <input type="text" name="apellidos" id="apellidos" th:value="${apellido}" /> </br>
