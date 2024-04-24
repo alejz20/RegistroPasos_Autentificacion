@@ -5,14 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.logging.log4j.message.StringFormattedMessage;
 
 import java.util.Date;
 import java.util.List;
 
 @Getter @Setter @NoArgsConstructor
 @AllArgsConstructor
-public class Datos {
+public class DatosRegistro {
 
 //    <!-- Datos usuarios -->
 

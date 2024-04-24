@@ -1,6 +1,7 @@
 package com.alejandra.registropasos_autent.model;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.HashMap;
 import java.util.Map;
